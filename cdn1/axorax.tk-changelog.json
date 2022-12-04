@@ -1,0 +1,54 @@
+{
+    "October 14, 2022": {
+        "added": [
+            "Added Changelog for axorax.tk"
+        ],
+        "removed": []
+    },
+    "October 18, 2022": {
+        "added": [
+            "New search bar with filters",
+            "Added animations for search bar"
+        ],
+        "removed": [
+            "Removed old search bar"
+        ]
+    },
+    "October 22, 2022 (approx.)": {
+        "added": [
+            "Lazy loading images",
+            "Article control buttons"
+        ],
+        "removed": []
+    },
+    "October 28, 2022 (approx.)": {
+        "added": [
+            "Tooltip for article card"
+        ],
+        "removed": []
+    },
+    "November 19, 2022 (approx.)": {
+        "added": [
+            "Tag cards above article cards"
+        ],
+        "removed": []
+    },
+    "November 23, 2022 (approx.)": {
+        "added": [
+            "Indicator to show site load progress"
+        ],
+        "removed": []
+    },
+    "November 25, 2022 (approx.)": {
+        "added": [
+            "Changed donate button hover effect"
+        ],
+        "removed": []
+    },
+    "November 26, 2022 (approx.)": {
+        "added": [
+            "Better donate button popup"
+        ],
+        "removed": []
+    }
+}

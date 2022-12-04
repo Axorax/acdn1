@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #33bd5f;
+    padding: .6rem 1rem;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.changelog-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.changelog {
+    padding: 2rem 1rem;
+}
+
+.box {
+    border-left: 1.7px solid #d6dbe8;
+    padding-left: 1rem;
+    position: relative;
+    padding-bottom: .8rem;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    left: -4.4px;
+    top: 8.5px;
+    width: 7px;
+    background: #858FA2;
+    aspect-ratio: 1/1;
+    z-index: 1;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    left: -4.4px;
+    top: .1%;
+    width: 7px;
+    height: 23px;
+    background: #fff;
+}
+
+.box ul {
+    list-style: none;
+    margin-top: .7rem;
+    border-radius: 7px;
+    border: 1.4px solid #dcdfe7;
+}
+
+.box ul li {
+    padding: .5rem 1rem;
+    border-bottom: 1.4px solid #dcdfe7;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.box ul li:last-child {
+    border-bottom: none;
+}
+
+.box ul li.add::before {
+    content: '+';
+    left: .8rem;
+    top: -5px;
+    position: absolute;
+    font-weight: 900;
+    font-size: 1.9rem;
+    color: #3BA55C;
+}
+
+.box ul li.remove::before {
+    content: '-';
+    left: .8rem;
+    top: -5px;
+    position: absolute;
+    font-weight: 900;
+    font-size: 1.9rem;
+    color: #d16142;
+}

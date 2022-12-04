@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog</title>
+    <link rel="stylesheet" href="wp-content1/changelog.css">
+</head>
+<body>
+
+    <nav>
+        axorax.tk Changelog
+    </nav>
+    
+    <div class="changelog-wrapper">
+        <div class="changelog">
+            <!-- <div class="box">
+                <div class="info">March 1, 2022</div>
+                <ul>
+                    <li class="add">Implemented Image Lazy Loading</li>
+                    <li class="remove">Added Crazy Loading</li>
+                    <li>Nothing!</li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+
+
+    <script>
+        let showing = 2;
+        fetch('cdn1/axorax.tk-changelog.json').then(res => res.json()).then(data => {
+            for(let i=0; i < Object.keys(data).length;i++) {
+                let changes = '';
+                const dataItem = data[Object.keys(data)[i]];
+                const removedCheck = dataItem.removed.length || 0;
+                for (let k=0; k<dataItem.added.length;k++) {
+                    changes += `<li class="add">${dataItem.added[k]}</li>`
+                }
+                for (let k=0; k<removedCheck;k++) {
+                    changes += `<li class="remove">${dataItem.removed[k]}</li>`
+                }
+                const t = `
+                <div class="info">${Object.keys(data)[i]}</div>
+                <ul>
+                    ${changes}
+                </ul>
+                `
+                const e = document.createElement('div');
+                e.classList.add('box');
+                e.innerHTML = t;
+                document.querySelector('.changelog').prepend(e);
+            }
+        })
+    </script>
+
+</body>
+</html>
